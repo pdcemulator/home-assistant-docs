@@ -731,7 +731,7 @@ Nope! We are committed to keep supporting all platforms that are currently avail
       </div>
     </div>
   </div>
-  <div class="blue-buy-fab" onclick="showBuyDialog()" title="buy blue">
+  <div class="fab" onclick="showBuyDialog()" title="buy blue">
     <svg style="width: 32px; height: 32px" viewBox="0 0 32 32">
       <path
         fill="currentColor"
@@ -742,7 +742,7 @@ Nope! We are committed to keep supporting all platforms that are currently avail
   </div>
   <script>
     const buyDialog = document.getElementById("buy-dialog");
-    const buyFab = document.querySelector(".blue-buy-fab");
+    const buyFab = document.querySelector(".fab");
 
     function showBuyDialog() {
       buyDialog.style.display = "flex";
@@ -759,23 +759,5 @@ Nope! We are committed to keep supporting all platforms that are currently avail
         closeDialog();
       }
     };
-
-    if (document.documentElement.clientWidth < 480) {
-      document.querySelector(".page-content").addEventListener(
-        "scroll",
-        function (e) {
-          const header = document.querySelector(".site-header");
-          const fab = document.querySelector(".blue-buy-fab");
-          if (e.currentTarget.scrollTop > 180) {
-            header.style.backgroundColor = "#ffffff";
-            fab.style.display = "flex";
-          } else {
-            header.style.backgroundColor = "#ffffff66";
-            fab.style.display = "none";
-          }
-        },
-        { passive: true, capture: true }
-      );
-    }
   </script>
 </div>
