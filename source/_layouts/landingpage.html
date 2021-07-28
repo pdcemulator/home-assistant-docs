@@ -6,7 +6,7 @@ layout: page
   <div class="banner">
     <img src="{{ page.og_image }}"></i>
     {% if page.tagline %}
-      <div class="title wide">
+      <div class="title {% if page.tagline_wide != false %}wide{% endif %}">
       {{ page.tagline }}
       </div>
     {% endif %}
