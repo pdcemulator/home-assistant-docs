@@ -75,9 +75,8 @@ $ha__primary_color: #03a9f4;
   }
 
   .icon-button-row {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 8px;
+    display: flex;
+    justify-content: space-evenly;
 
     a {
       display: block;
@@ -906,6 +905,10 @@ $ha__primary_color: #03a9f4;
       .section-inner {
         flex-direction: column-reverse !important;
         padding: 32px 0;
+
+        img {
+          max-width: 100%;
+        }
   
         .section-inner-content {
           margin-bottom: 16px;
@@ -914,6 +917,14 @@ $ha__primary_color: #03a9f4;
       }
     }
 
+    .icon-button-row {
+      display: flex;
+      flex-direction: column;
+      .icon-button {
+        width: calc(100% - 8px);
+        margin: 2px 4px;
+      }
+    }
 
     .content {
       margin: 0 8px;
@@ -921,14 +932,6 @@ $ha__primary_color: #03a9f4;
       .sub-title {
         font-size: 24px;
         line-height: 28px;
-      }
-
-      .icon-button-row {
-        display: flex;
-        flex-direction: column;
-        .icon-button {
-          width: 100%;
-        }
       }
 
       .banner-overlay {

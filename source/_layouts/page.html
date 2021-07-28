@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
+
 <article class="page">
-  {% if page.title and page.show_title != false %}
+  {% if page.title and page.show_title != false and page.layout != "landingpage"  %}
   <header>
     <h1 class="title indent">
       {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title
@@ -15,41 +16,3 @@ layout: default
 
   {% include feedback.html %}
 </article>
-
-{% if page.body_id == "landingpage" %}
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
-      });
-  });
-  if (document.documentElement.clientWidth < 480) {
-    document.querySelector(".page-content").addEventListener(
-      "scroll",
-      function (e) {
-        console.log(e.currentTarget.scrollTop )
-        const header = document.querySelector(".site-header");
-        const fab = document.querySelector(".fab");
-        if (e.currentTarget.scrollTop > 180) {
-          header.style.backgroundColor = "#ffffff";
-          if (fab) {
-            fab.style.display = "flex";
-          }
-        } else {
-          header.style.backgroundColor = "#ffffff66";
-          if (fab) {
-            fab.style.display = "none";
-          }
-        }
-      },
-      { passive: true, capture: true }
-    );
-  }
-</script>
-
-{% endif %}
