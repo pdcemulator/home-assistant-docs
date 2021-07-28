@@ -99,7 +99,11 @@ $ha__primary_color: #03a9f4;
       border-radius: 8px;
 
       .icon {
-        padding-top: 12px;
+        padding: 12px;
+        height: 56px;
+        width: auto;
+        display: flex;
+        align-items: center;
         
         img {
           box-shadow: none;
