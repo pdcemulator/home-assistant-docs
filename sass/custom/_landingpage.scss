@@ -47,7 +47,7 @@ $ha__primary_color: #03a9f4;
       left: calc(50% - 700px / 2 - 0.5px);
       font-size: 52px;
       line-height: 52px;
-      bottom: 626px;
+      bottom: 390px;
     }
     img {
       width: 100%;
@@ -163,6 +163,11 @@ $ha__primary_color: #03a9f4;
         width: 330px;
         align-self: center;
         padding: 0;
+      }
+
+      img {
+        max-width: 500px;
+        max-height: 400px;
       }
     }
   }
@@ -876,6 +881,10 @@ $ha__primary_color: #03a9f4;
         }
       }
 
+      .wide {
+        line-height: 1em;
+      }
+
     }
 
     .section-content {
@@ -896,8 +905,6 @@ $ha__primary_color: #03a9f4;
         }
       }
     }
-
-
 
 
     .content {
@@ -921,6 +928,7 @@ $ha__primary_color: #03a9f4;
         display: block;
         width: 100%;
         padding: 0;
+        padding-bottom: 2px;
 
         .energy-button-getting-started {
           .banner-overlay-button {
