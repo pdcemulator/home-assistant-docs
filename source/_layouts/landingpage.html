@@ -49,6 +49,9 @@ layout: page
               <div class="section-inner-content">
                   <div class="title">{{entry.title}}</div>
                   <div class="description">{{entry.description}}</div>
+                  {% if entry.read_more %}
+                    <a class="button" href="{{entry.read_more}}">READ MORE</a>
+                  {% endif %}
               </div>
           </div>
         {% endfor %}
